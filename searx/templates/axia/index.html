@@ -1,0 +1,17 @@
+{% extends "axia/base.html" %}
+{% block content %}
+{% include 'axia/github_ribbon.html' %}
+<div class="center">
+    <div class="title"><h1>AXIA Search</h1></div>
+    {% include 'axia/search.html' %}
+    <p class="top_margin">
+    	{% if rtl %}
+    	<a href="{{ url_for('preferences') }}" class="hmarg">{{ _('preferences') }}</a>
+    	{% endif %}
+        <a href="{{ url_for('about') }}" class="hmarg">{{ _('about') }}</a>
+        {% if not rtl %}
+        <a href="{{ url_for('preferences') }}" class="hmarg">{{ _('preferences') }}</a>
+        {% endif %}
+    </p>
+</div>
+{% endblock %}

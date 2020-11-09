@@ -1,0 +1,32 @@
+{% from 'oscar/macros.html' import icon %}
+<form method="{{ method or 'POST' }}" action="{{ url_for('search') }}" id="search_form" role="search">
+    <div class="row resultSearch1">
+        <div class="col-xs-2 col-md-1">
+            <a href="/"><img src="/static/img/logo.svg" title="Axia Search" /></a>
+        </div>
+        <div class="col-xs-10 col-md-7">
+            <div class="input-group search-margin">
+
+                <input type="search" autofocus name="q" style="width:100%" class="form-control" id="q" placeholder="{{ _('Search for...') }}" aria-label="{{ _('Search for...') }}" autocomplete="off" value="{{ q }}" accesskey="s">
+
+                <span class="input-group-btn searchBtnXPre">
+                    <button type="submit" class="btn btn-default searchBtnX" aria-label="{{ _('Start search') }}"><span class="hide_if_nojs">{{ icon('search') }}</span><span class="hidden active_if_nojs">{{ _('Start search') }}</span></button>
+                    <!--  <button type="reset" class="btn btn-default" aria-label="{{ _('Clear search') }}"><span class="hide_if_nojs">{{ icon('remove') }}</span><span class="hidden active_if_nojs">{{ _('Clear') }}</span></button>-->
+                </span>
+
+                <span id="btnSrc2" data-cat="{{selected_categories}}"></span>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-2 search-margin">
+            {%- include 'oscar/time-range.html' -%}
+        </div>
+        <div class="col-xs-6 col-md-2 search-margin">
+            {%- include 'oscar/languages.html' -%}
+        </div>
+    </div>
+  <div class="row resultSearch2">
+    <div class="col-sm-12">
+        {%- include 'oscar/categories.html' -%}
+    </div>
+  </div>
+</form><!-- / #search_form_full -->

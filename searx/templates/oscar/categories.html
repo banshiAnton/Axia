@@ -1,0 +1,14 @@
+<div id="categories">
+{%- if rtl -%}
+    {% for category in categories | reverse -%}
+        <input class="hidden" type="checkbox" id="checkbox_{{ category|replace(' ', '_') }}" name="category_{{ category }}" {% if category in selected_categories %}checked="checked"{% endif %} />{{- '' -}}
+        <label  onclick="cngIcon('{{ category }}');" for="checkbox_{{ category|replace(' ', '_') }}"><i class="xIcon xIcon-{{ _(category) }}"></i> {{ _(category) }}</label>
+    {%- endfor %}
+{%- else -%}
+    {% for category in categories -%}
+        <input class="hidden" type="checkbox" id="checkbox_{{ category|replace(' ', '_') }}" name="category_{{ category }}" {% if category in selected_categories %}checked="checked"{% endif %} />{{- '' -}}
+<label onclick="cngIcon('{{ category }}');" for="checkbox_{{ category|replace(' ', '_') }}"><i class="xIcon xIcon-{{ _(category) }}"></i> {{ _(category) }}</label>
+    {%- endfor %}
+{%- endif -%}
+</div>
+
