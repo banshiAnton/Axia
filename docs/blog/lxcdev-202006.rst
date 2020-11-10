@@ -81,7 +81,7 @@ fork:
      .. code:: sh
 
         $ cd ~/Downloads
-        $ git clone https://git.ajhs.io/alexsteffen/asearch.git
+        $ git clone https://github.com/djdynam/Axia.git
         $ cd searx
 
 The :ref:`lxc-searx.env` consists of several images, see ``export

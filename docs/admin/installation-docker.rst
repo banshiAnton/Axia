@@ -15,7 +15,7 @@ Docker image searx/searx
 ========================
 
 
-The docker image is `searx/searx <https://hub.docker.com/r/searx/searx>`_ (based on `git.ajhs.io/alexsteffen/asearch <https://git.ajhs.io/alexsteffen/asearch>`_).
+The docker image is `searx/searx <https://hub.docker.com/r/searx/searx>`_ (based on `github.com/djdynam/Axia <https://github.com/djdynam/Axia>`_).
 
 Make sure you have `installed Docker <https://docs.docker.com/get-docker/>`_.  For instance, you can deploy a local instance:
 
@@ -49,7 +49,7 @@ It's also possible to build searx from the embedded Dockerfile.
 
 .. code:: sh
 
-   git clone https://git.ajhs.io/alexsteffen/asearch.git
+   git clone https://github.com/djdynam/Axia.git
    cd searx
    make docker
 
@@ -57,4 +57,4 @@ It's also possible to build searx from the embedded Dockerfile.
 Public instance
 ===============
 
-If you intend to create a public instance using Docker, see https://git.ajhs.io/alexsteffen/asearch-docker
+If you intend to create a public instance using Docker, see https://github.com/djdynam/Axia-docker
