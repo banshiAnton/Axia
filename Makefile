@@ -2,9 +2,9 @@
 .DEFAULT_GOAL=help
 
 # START Makefile setup
-export GIT_URL=https://https://git.ajhs.io/alexsteffen/asearch
+export GIT_URL=https://github.com/djdynam/Axia
 export GIT_BRANCH=master
-export SEARX_URL=https://search.ajhs.dev
+export SEARX_URL=https://search.ajhs.us
 export DOCS_URL=https://searx.github.io/searx
 # END Makefile setup
 
