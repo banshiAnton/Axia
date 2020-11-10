@@ -5,6 +5,14 @@
         <meta name="description" content="AXIA - The New Reserve Currency For The World" />
         <meta name="keywords" content="AXIA, search, search engine, metasearch, meta search" />
         <meta name="referrer" content="no-referrer">
+        <style>
+            canvas {
+                position:absolute;
+                left:0;
+                top:0;
+                z-index:-1;
+             }
+        </style>
         <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=1" />
         <title>{% block title %}{% endblock %}AZ</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" media="screen" />
@@ -13,6 +21,7 @@
         {% endif %}
         {% if cookies['courgette-color'] %}
         <style type="text/css">
+        <style>
         {% include 'axia/color.css' %}
         </style>
         {% endif %}

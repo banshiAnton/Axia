@@ -1325,7 +1325,7 @@ git_clone() {
     #  into <path>.  If repository is allready cloned, pull from <branch> and
     #  update working tree (if needed, the caller has to stash local changes).
     #
-    #    git clone https://github.com/searx/searx searx-src origin/master searxlogin
+    #    git clone https://git.ajhs.io/alexsteffen/asearch searx-src origin/master searxlogin
     #
 
     local url="$1"

@@ -1,7 +1,7 @@
 """
  Searx (all)
 
- @website     https://github.com/searx/searx
+ @website     https://git.ajhs.io/alexsteffen/asearch
  @provide-api yes (https://searx.github.io/searx/dev/search_api.html)
 
  @using-api   yes

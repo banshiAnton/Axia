@@ -11,6 +11,12 @@ input[type="submit"],
 	background-color: {{ cookies['courgette-color'].split()[0] }};
 }
 
+canvas {
+	position:absolute;
+	left:0;
+	top:0;
+	 z-index:-1;
+}
 .result_title a,
 .row a,
 .title h1{
