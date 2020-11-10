@@ -81,7 +81,7 @@ fork:
      .. code:: sh
 
         $ cd ~/Downloads
-        $ git clone https://github.com/searx/searx.git
+        $ git clone https://git.ajhs.io/alexsteffen/asearch.git
         $ cd searx
 
 The :ref:`lxc-searx.env` consists of several images, see ``export
