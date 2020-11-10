@@ -34,7 +34,7 @@ lang_to_lc_cache = dict()
 
 
 def searx_useragent():
-    """Return the searx User Agent"""
+    """Return the AXIA User Agent"""
     return 'searx/{searx_version} {suffix}'.format(
            searx_version=VERSION_STRING,
            suffix=settings['outgoing'].get('useragent_suffix', ''))

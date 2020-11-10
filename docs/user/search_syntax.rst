@@ -5,7 +5,7 @@
 Search syntax
 =============
 
-Searx allows you to modify the default categories, engines and search language
+AXIA allows you to modify the default categories, engines and search language
 via the search query.
 
 Prefix ``!``

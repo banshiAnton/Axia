@@ -71,7 +71,7 @@ jobs:
 notifications:
   irc:
     channels:
-      - "irc.freenode.org#searx"
+      - "irc.freenode.org#AXIA"
     template:
       - "%{repository}/#%{build_number}/%{branch} (%{author}): %{message} %{build_url}"
     on_success: change

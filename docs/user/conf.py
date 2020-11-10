@@ -1,7 +1,7 @@
 # -*- coding: utf-8; mode: python -*-
-"""Configuration for the Searx user handbook
+"""Configuration for the AXIA user handbook
 """
-project   = 'Searx User-HB'
+project   = 'AXIA User-HB'
 version   = release = VERSION_STRING
 
 # Grouping the document tree into LaTeX files. List of tuples

@@ -303,7 +303,7 @@ $(document).ready(function() {
 
         html += '<div class="row">';
         html += '<div class="col-sm-12">';
-        html += '<h3>How to navigate searx with Vim-like hotkeys</h3>';
+        html += '<h3>How to navigate AXIA with Vim-like hotkeys</h3>';
         html += '</div>'; // col-sm-12
         html += '</div>'; // row
 

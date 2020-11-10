@@ -3,15 +3,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="{{ preferences.get_value('locale') }}" xml:lang="{{ preferences.get_value('locale') }}"{% if rtl %} dir="rtl"{% endif %}>
 <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Axia metasearch engine" />
-    <meta name="keywords" content="Axia, search, search engine, metasearch, meta search" />
+    <meta name="description" content="AXIA metasearch engine" />
+    <meta name="keywords" content="AXIA, search, search engine, metasearch, meta search" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="Axia/{{ searx_version }}">
+    <meta name="generator" content="AXIA/{{ searx_version }}">
     <meta name="referrer" content="no-referrer">
     <meta name="viewport" content="width=device-width, initial-scale=1 , maximum-scale=2.0, user-scalable=1" />
     {% block meta %}{% endblock %}
     <script src="{{ url_for('js_translations') }}"></script>
-    <title>{% block title %}{% endblock %}Axia</title>
+    <title>{% block title %}{% endblock %}AXIA</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" type="text/css" />
     {% if preferences.get_value('oscar-style') -%}
     {{'    '}}<link rel="stylesheet" href="{{ url_for('static', filename='css/'+preferences.get_value('oscar-style')+'.css') }}" type="text/css" />
@@ -88,7 +88,7 @@
                 {% endblock %}
                 <p class="text-muted">
                     <small>
-                        {{ _('Powered by') }} Axia
+                        {{ _('Powered by') }} AXIA
                         {% if 1 == 2 %}
                         <!--<br/>
                     <a href="{{ brand.GIT_URL }}">{{ _('Source code') }}</a> |

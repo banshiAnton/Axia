@@ -18,11 +18,11 @@ How to protect an instance
 
 .. _filtron: https://github.com/asciimoo/filtron
 
-Searx depends on external search services.  To avoid the abuse of these services
-it is advised to limit the number of requests processed by searx.
+AXIA depends on external search services.  To avoid the abuse of these services
+it is advised to limit the number of requests processed by AXIA.
 
 An application firewall, filtron_ solves exactly this problem.  Filtron is just
-a middleware between your web server (nginx, apache, ...) and searx, we describe
+a middleware between your web server (nginx, apache, ...) and AXIA, we describe
 such infratructures in chapter: :ref:`architecture`.
 
 

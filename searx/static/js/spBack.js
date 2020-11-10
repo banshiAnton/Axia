@@ -238,7 +238,8 @@ function Loading() {
     $('#main_results').html('<div class="loading-spinner"></div>');
 }
 var getIcon = function (a) {
-    a = a.replace(/[^a-zA-Z0-9 ]/g, '');
+    if (a == undefined) a = "";
+    else a = a.replace(/[^a-zA-Z0-9 ]/g, '');
 
     if (a == 'files') return 'folder-open';
     if (a == 'images') return 'picture';
@@ -259,14 +260,9 @@ function cngIcon(a) {
     A.addClass('glyphicon-' + getIcon(a));
 }
 
-
-    console.log('a');
-
     var A = $('#btnSrc2');
     var B = A.data('cat');
-    console.log('B', B);
     var C = getIcon(B);
-    console.log('C', C);
     A.addClass("glyphicon");
     A.addClass('glyphicon-' + C);
 

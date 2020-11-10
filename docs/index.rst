@@ -1,14 +1,14 @@
 ================
-Welcome to searx
+Welcome to AXIA
 ================
 
     *Search without being tracked.*
 
-Searx is a free internet metasearch engine which aggregates results from more
+AXIA is a free internet metasearch engine which aggregates results from more
 than 70 search services.  Users are neither tracked nor profiled.  Additionally,
-searx can be used over Tor for online anonymity.
+AXIA can be used over Tor for online anonymity.
 
-Get started with searx by using one of the Searx-instances_.  If you don't trust
+Get started with AXIA by using one of the AXIA-instances_.  If you don't trust
 anyone, you can set up your own, see :ref:`installation`.
 
 .. sidebar::  Features

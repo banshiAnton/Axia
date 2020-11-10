@@ -72,18 +72,18 @@ RUN su searx -c "/usr/bin/python3 -m compileall -q searx"; \
 
 # Keep this argument at the end since it change each time
 ARG LABEL_DATE=
-LABEL maintainer="Axia Search <${GIT_URL}>" \
+LABEL maintainer="AXIA Search <${GIT_URL}>" \
       description="metasearch engine." \
       version="${SEARX_GIT_VERSION}" \
       org.label-schema.schema-version="1.0" \
-      org.label-schema.name="Axia" \
+      org.label-schema.name="AXIA" \
       org.label-schema.version="${SEARX_GIT_VERSION}" \
       org.label-schema.url="${LABEL_VCS_URL}" \
       org.label-schema.vcs-ref=${LABEL_VCS_REF} \
       org.label-schema.vcs-url=${LABEL_VCS_URL} \
       org.label-schema.build-date="${LABEL_DATE}" \
       org.label-schema.usage="https://github.com/searx/searx-docker" \
-      org.opencontainers.image.title="Axia" \
+      org.opencontainers.image.title="AXIA Search" \
       org.opencontainers.image.version="${SEARX_GIT_VERSION}" \
       org.opencontainers.image.url="${LABEL_VCS_URL}" \
       org.opencontainers.image.revision=${LABEL_VCS_REF} \

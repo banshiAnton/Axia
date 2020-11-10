@@ -1,22 +1,5 @@
 #!/usr/bin/env python
 
-'''
-searx is free software: you can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-searx is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU Affero General Public License for more details.
-
-You should have received a copy of the GNU Affero General Public License
-along with searx. If not, see < http://www.gnu.org/licenses/ >.
-
-(C) 2013- by Adam Tauber, <asciimoo@gmail.com>
-'''
-
 import sys
 if sys.version_info[0] < 3:
     print('\033[1;31m Python2 is no longer supported\033[0m')
@@ -760,7 +743,7 @@ def autocompleter():
     # run autocompleter
     completer = autocomplete_backends.get(request.preferences.get_value('autocomplete'))
 
-    # parse searx specific autocompleter results like !bang
+    # parse AXIA specific autocompleter results like !bang
     raw_results = searx_bang(raw_text_query)
 
     # normal autocompletion results only appear if no inner results returned

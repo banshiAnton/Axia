@@ -7,11 +7,11 @@ Engine overview
 
 .. _metasearch-engine: https://en.wikipedia.org/wiki/Metasearch_engine
 
-searx is a metasearch-engine_, so it uses different search engines to provide
+AXIA is a metasearch-engine_, so it uses different search engines to provide
 better results.
 
 Because there is no general search API which could be used for every search
-engine, an adapter has to be built between searx and the external search
+engine, an adapter has to be built between AXIA and the external search
 engines.  Adapters are stored under the folder :origin:`searx/engines`.
 
 .. contents::
@@ -21,7 +21,7 @@ engines.  Adapters are stored under the folder :origin:`searx/engines`.
 general engine configuration
 ============================
 
-It is required to tell searx the type of results the engine provides. The
+It is required to tell AXIA the type of results the engine provides. The
 arguments can be set in the engine file or in the settings file
 (normally ``settings.yml``). The arguments in the settings file override
 the ones in the engine file.
@@ -69,7 +69,7 @@ overrides
 
 A few of the options have default values in the engine, but are often
 overwritten by the settings.  If ``None`` is assigned to an option in the engine
-file, it has to be redefined in the settings, otherwise searx will not start
+file, it has to be redefined in the settings, otherwise AXIA will not start
 with that engine.
 
 The naming of overrides is arbitrary.  But the recommended overrides are the
@@ -166,7 +166,7 @@ example code
 returned results
 ================
 
-Searx is able to return results of different media-types.  Currently the
+AXIA is able to return results of different media-types.  Currently the
 following media-types are supported:
 
 - default_

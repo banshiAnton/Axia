@@ -1,6 +1,6 @@
 general:
     debug : False
-    instance_name : "Axia"
+    instance_name : "AXIA Search"
 
 search:
     language: "all"

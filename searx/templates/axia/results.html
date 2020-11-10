@@ -1,6 +1,6 @@
 {% extends "axia/base.html" %}
 {% block title %}{{ q|e }} - {% endblock %}
-{% block meta %}<link rel="alternate" type="application/rss+xml" title="Searx search: {{ q|e }}" href="{{ url_for('search', _external=True) }}?q={{ q|urlencode }}&amp;format=rss&amp;{% for category in selected_categories %}category_{{ category }}=1&amp;{% endfor %}pageno={{ pageno }}">{% endblock %}
+{% block meta %}<link rel="alternate" type="application/rss+xml" title="AXIA search: {{ q|e }}" href="{{ url_for('search', _external=True) }}?q={{ q|urlencode }}&amp;format=rss&amp;{% for category in selected_categories %}category_{{ category }}=1&amp;{% endfor %}pageno={{ pageno }}">{% endblock %}
 {% block content %}
 <div class="right"><a href="{{ url_for('preferences') }}" id="preferences"><span>{{ _('preferences') }}</span></a></div>
 <div class="small search center">

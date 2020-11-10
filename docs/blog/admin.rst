@@ -1,5 +1,5 @@
 =============================================================
-Searx admin interface
+AXIA admin interface
 =============================================================
 
 .. _searx-admin: https://github.com/kvch/searx-admin#searx-admin
@@ -11,7 +11,7 @@ Searx admin interface
 
    Installation guide can be found in the repository of searx-admin_.
 
-One of the biggest advantages of searx is being extremely customizable. But at
+One of the biggest advantages of AXIA is being extremely customizable. But at
 first it can be daunting to newcomers.  A barrier of taking advantage of this
 feature is our ugly settings file which is sometimes hard to understand and
 edit.

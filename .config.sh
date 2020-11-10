@@ -12,7 +12,7 @@
 #
 #     git add .config
 
-# The public URL of the searx instance: PUBLIC_URL="https://mydomain.xy/searx"
+# The public URL of the AXIA instance: PUBLIC_URL="https://mydomain.xy/searx"
 # The default is taken from ./utils/brand.env.
 
 PUBLIC_URL="${SEARX_URL}"
@@ -27,7 +27,7 @@ fi
 
 # SEARX_INTERNAL_URL="127.0.0.1:8888"
 
-# Only change, if you maintain a searx brand in your searx fork.
+# Only change, if you maintain a AXIA brand in your AXIA fork.
 # GIT_BRANCH="${GIT_BRANCH:-master}"
 
 # filtron.sh
@@ -52,4 +52,4 @@ fi
 
 # **experimental**: Set SERVICE_USER to run all services by one account, but be
 # aware that removing discrete components might conflict!
-# SERVICE_USER=searx
+# SERVICE_USER=AXIA

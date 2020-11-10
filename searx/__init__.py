@@ -1,16 +1,16 @@
 '''
-searx is free software: you can redistribute it and/or modify
+AXIA is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-searx is distributed in the hope that it will be useful,
+AXIA is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU Affero General Public License for more details.
 
 You should have received a copy of the GNU Affero General Public License
-along with searx. If not, see < http://www.gnu.org/licenses/ >.
+along with AXIA. If not, see < http://www.gnu.org/licenses/ >.
 
 (C) 2013- by Adam Tauber, <asciimoo@gmail.com>
 '''
@@ -40,7 +40,7 @@ if 'SEARX_SETTINGS_PATH' in environ:
     # enviroment variable SEARX_SETTINGS_PATH
     settings_path = check_settings_yml(environ['SEARX_SETTINGS_PATH'])
 else:
-    # if not, get it from searx code base or last solution from /etc/searx
+    # if not, get it from AXIA code base or last solution from /etc/searx
     settings_path = check_settings_yml(join(searx_dir, 'settings.yml')) or check_settings_yml('/etc/searx/settings.yml')
 
 if not settings_path:

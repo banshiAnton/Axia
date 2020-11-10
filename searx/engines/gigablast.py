@@ -15,7 +15,7 @@
 import re
 from json import loads
 from urllib.parse import urlencode
-# from searx import logger
+# from AXIA import logger
 from searx.poolrequests import get
 
 # engine dependent config

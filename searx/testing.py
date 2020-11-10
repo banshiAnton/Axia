@@ -37,7 +37,7 @@ class SearxTestLayer:
 
 
 class SearxRobotLayer():
-    """Searx Robot Test Layer"""
+    """AXIA Robot Test Layer"""
 
     def setUp(self):
         os.setpgrp()  # create new process group, become its leader

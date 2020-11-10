@@ -111,7 +111,7 @@ html_sidebars = {
 singlehtml_sidebars = {"index": ["project.html", "localtoc.html"]}
 html_static_path = ["static"]
 html_logo = "static/img/searx_logo_small.png"
-html_title = "Searx Documentation ({})".format("Searx-{}.tex".format(VERSION_STRING))
+html_title = "AXIA Documentation ({})".format("Searx-{}.tex".format(VERSION_STRING))
 html_show_sourcelink = False
 
 # LaTeX ----------------------------------------------------------------

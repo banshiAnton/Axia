@@ -12,7 +12,7 @@ How to setup result proxy
 .. _morty: https://github.com/asciimoo/morty
 .. _morty's README: https://github.com/asciimoo/morty
 
-By default searx can only act as an image proxy for result images, but it is
+By default AXIA can only act as an image proxy for result images, but it is
 possible to proxify all the result URLs with an external service, morty_.
 
 To use this feature, morty has to be installed and activated in searx's
