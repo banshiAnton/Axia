@@ -180,7 +180,7 @@ def get_locale():
         locale = 'zh_Hant_TW'
 
     # see _get_translations function
-    # and https://github.com/djdynam/Axia/pull/1863
+    # and https://git.ajhs.io/alexsteffen/asearch/pull/1863
     if locale == 'oc':
         request.form['use-translation'] = 'oc'
         locale = 'fr_FR'

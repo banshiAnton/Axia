@@ -36,7 +36,7 @@ and some maintenance tasks (alternatively you can create your own fork).
 .. code:: bash
 
    $ cd ~/Downloads
-   $ git clone https://github.com/djdynam/Axia searx
+   $ git clone https://git.ajhs.io/alexsteffen/asearch searx
    $ cd searx
 
 **Install** :ref:`searx service <searx.sh>`
