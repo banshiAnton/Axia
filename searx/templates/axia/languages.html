@@ -1,4 +1,4 @@
-{% from 'oscar/macros.html' import custom_select_class %}
+{% from 'axia/macros.html' import custom_select_class %}
 <label class="visually-hidden" for="language">{{ _('Language') }}</label>
 <select class="language form-control {{ custom_select_class(rtl) }}" id="language" name="language" accesskey="l">
   <option value="all" {% if current_language == 'all' %}selected="selected"{% endif %}>{{ _('Default language') }}</option>

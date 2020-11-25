@@ -1,4 +1,4 @@
-{% from 'oscar/macros.html' import icon %}
+{% from 'axia/macros.html' import icon %}
 <form method="{{ method or 'POST' }}" action="{{ url_for('search') }}" id="search_form" role="search">
     <div class="row resultSearch1">
         <div class="col-xs-2 col-md-1">
@@ -18,15 +18,15 @@
             </div>
         </div>
         <div class="col-xs-6 col-md-2 search-margin">
-            {%- include 'oscar/time-range.html' -%}
+            {%- include 'axia/time-range.html' -%}
         </div>
         <div class="col-xs-6 col-md-2 search-margin">
-            {%- include 'oscar/languages.html' -%}
+            {%- include 'axia/languages.html' -%}
         </div>
     </div>
   <div class="row resultSearch2">
     <div class="col-sm-12">
-        {%- include 'oscar/categories.html' -%}
+        {%- include 'axia/categories.html' -%}
     </div>
   </div>
 </form><!-- / #search_form_full -->

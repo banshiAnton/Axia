@@ -1,4 +1,4 @@
-{% extends "oscar/base.html" %}
+{% extends "axia/base.html" %}
 {% macro search_form_attrs(pageno) -%}
     {%- for category in selected_categories -%}<input type="hidden" name="category_{{ category }}" value="1"/>{%- endfor -%}
     <input type="hidden" name="q" value="{{ q|e }}" />{{- "" -}}
@@ -12,7 +12,7 @@
 {% block title %}{{ q|e }} - {% endblock %}
 {% block meta %}{{"    "}}<link rel="alternate" type="application/rss+xml" title="AXIA search: {{ q|e }}" href="{{ search_url() }}&amp;format=rss">{% endblock %}
 {% block content %}
-    {% include 'oscar/search.html' %}
+    {% include 'axia/search.html' %}
 
     <div class="row">
         <div class="col-sm-4 col-sm-push-8" id="sidebar_results">
@@ -23,7 +23,7 @@
 
             {% if infoboxes -%}
                 {% for infobox in infoboxes %}
-                    {% include 'oscar/infobox.html' %}{{- "\n\n" -}}
+                    {% include 'axia/infobox.html' %}{{- "\n\n" -}}
                 {% endfor %}
             {%- endif %}
 
@@ -117,13 +117,13 @@
                 {%- if result.template -%}
                     {% include get_result_template('oscar', result['template']) %}
                 {%- else -%}
-                    {% include 'oscar/result_templates/default.html' %}
+                    {% include 'axia/result_templates/default.html' %}
                 {%- endif -%}
             </div>
             {% endfor %}
 
             {% if not results and not answers -%}
-                {% include 'oscar/messages/no_results.html' %}
+                {% include 'axia/messages/no_results.html' %}
             {% endif %}
 
             <div class="clearfix"></div>

@@ -1,4 +1,4 @@
-﻿{% from 'oscar/macros.html' import icon %}
+﻿{% from 'axia/macros.html' import icon %}
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="{{ preferences.get_value('locale') }}" xml:lang="{{ preferences.get_value('locale') }}"{% if rtl %} dir="rtl"{% endif %}>
 <head>
@@ -58,7 +58,7 @@
     <canvas data-strokecolor="255,255,255" id="canvas"></canvas>
     {% endif %}
     <div {% if endpoint == 'index' %} class="xBody" {% endif %}>
-        {% if 1 == 2 %}  <!--{% include 'oscar/navbar.html' %}--> {% endif %}
+        {% if 1 == 2 %}  <!--{% include 'axia/navbar.html' %}--> {% endif %}
 
         <div class="container">
             {% if errors %}
