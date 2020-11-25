@@ -4,6 +4,7 @@ requirejs.config({
         app: '../app'
     }
 });
+;
 window.searx = (function(d) {
     'use strict';
 
@@ -18,6 +19,7 @@ window.searx = (function(d) {
         method: script.getAttribute('data-method')
     };
 })(document);
+;
 
 if(searx.autocompleter) {
     searx.searchResults = new Bloodhound({
@@ -51,6 +53,7 @@ $(document).ready(function(){
         });
     }
 });
+;
 
 $(document).ready(function(){
     /**
@@ -150,8 +153,7 @@ $(document).ready(function(){
         }
     });
 });
-
-
+;
 $(document).ready(function(){
     $(".searx_overpass_request").on( "click", function( event ) {
         var overpass_url = "https://overpass-api.de/api/interpreter?data=";
