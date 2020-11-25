@@ -27,21 +27,6 @@
 <!-- Draw result footer -->
 {% macro result_footer(result, id) -%}
     <div class="clearfix"></div>{{- "" -}}
-    <div class="pull-right">
-        {%- for engine in result.engines -%}
-            <span class="label label-default">{{ engine }}</span>
-        {%- endfor -%}
-        {%- if result.url -%}
-            {% if result.cached_url %}
-            <small>{{ result_link(result.cached_url, icon('link') + _('cached'), "text-info", id) }}</small>
-            {% elif not result.is_onion %}
-            <small>{{ result_link("https://web.archive.org/web/" + result.url, icon('link') + _('cached'), "text-info", id) }}</small>
-            {% endif %}
-        {%- endif -%}
-        {%- if proxify -%}
-        <small>{{ result_link(proxify(result.url), icon('sort') + _('proxied'), "text-info", id) }}</small>
-        {%- endif -%}
-    </div>
     {%- if result.pretty_url -%}
     <div class="external-link">{{ result.pretty_url }}</div>
     {%- endif -%}
@@ -50,9 +35,9 @@
 <!-- Draw result footer -->
 {% macro result_footer_rtl(result, id) -%}
     <div class="clearfix"></div>{{- "" -}}
-    {% for engine in result.engines -%}
+    <!--{% for engine in result.engines -%}
         <span class="label label-default">{{ engine }}</span>
-    {%- endfor %}
+    {%- endfor %}-->
     {%- if result.url -%}
         {% if result.cached_url %}
         <small>{{ result_link(result.cached_url, icon('link') + _('cached'), "text-info", id) }}</small>

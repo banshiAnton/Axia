@@ -42,7 +42,7 @@ html {
 body {
     font-family: Roboto,Helvetica,Arial,sans-serif;
     margin-bottom: 80px;
-    background-color: #001828
+    background-color: #f3f3f3
 }
 
     body a {
@@ -1207,7 +1207,7 @@ background-color:rgba(255, 255, 255, 0.80);
 color:#444 !important;
 
 }
-#sidebar_results p small{color:#fff;}
+
 .result-content{
     font-size: 10pt;
     line-height:19pt;
@@ -1265,4 +1265,8 @@ time{font-size:8pt;
 }
 .tab-content{
     background:rgba(255, 255, 255, 0.94);
+}
+
+.index_endpoint{
+    background:#001828 !important;
 }

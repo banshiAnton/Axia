@@ -45,11 +45,19 @@
             .hide_if_nojs {display: none !important;overflow: hidden !important;}
             .disabled_if_nojs {pointer-events: none; cursor: default; text-decoration: line-through;}
         </style>
+
+        <style>
+            #AxiaLogo .xS1 {
+                stop-color:darkblue !important;
+            }
+        </style>
     </noscript>
 </head>
 <body class="{{ endpoint }}_endpoint">
+    {% if endpoint == "index" %}
     <canvas data-strokecolor="255,255,255" id="canvas"></canvas>
-    <div class="xBody">
+    {% endif %}
+    <div {% if endpoint == 'index' %} class="xBody" {% endif %}>
         {% if 1 == 2 %}  <!--{% include 'oscar/navbar.html' %}--> {% endif %}
 
         <div class="container">
@@ -91,11 +99,10 @@
                         {{ _('Powered by') }} AXIA
                         {% if 1 == 2 %}
                         <!--<br/>
-                    <a href="{{ brand.GIT_URL }}">{{ _('Source code') }}</a> |
-                     <a href="{{ brand.ISSUE_URL }}">{{ _('Issue tracker') }}</a> |
-                     <a href="{{ brand.PUBLIC_INSTANCES }}">{{ _('Public instances') }}</a>-->
-                        {%
-                        endif %}
+                        <a href="{{ brand.GIT_URL }}">{{ _('Source code') }}</a> |
+                         <a href="{{ brand.ISSUE_URL }}">{{ _('Issue tracker') }}</a> |
+                         <a href="{{ brand.PUBLIC_INSTANCES }}">{{ _('Public instances') }}</a>-->
+                        {% endif %}
 
 
                     </small>
@@ -110,7 +117,10 @@
         <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
         {% if autocomplete %}
         <script src="{{ url_for('static', filename='js/typeahead.bundle.min.js') }}"></script>{% endif %}
+        <script src="static/js/spAxia.js"></script>
+        {% if endpoint == "index" %}
         <script src="static/js/spBack.js"></script>
+        {% endif %}
         <script src="{{ url_for('static', filename='js/require-2.1.15.min.js') }}"></script>
         <script src="{{ url_for('static', filename='js/searx.min.js') }}"
                 data-method="{{ method or 'POST' }}"
