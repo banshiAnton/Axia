@@ -1,11 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\searx",
-    "\\searx\\templates",
-    "\\searx\\templates\\oscar",
-    "\\searx\\templates\\oscar\\result_templates"
+    "\\searx"
   ],
-  "SelectedNode": "\\searx\\templates\\oscar\\index.html",
+  "SelectedNode": "\\searx\\engines\\xpath.py",
   "PreviewInSolutionExplorer": false
 }
