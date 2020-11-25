@@ -1,7 +1,7 @@
 """
  Searx (all)
 
- @website     https://git.ajhs.io/alexsteffen/asearch
+ @website     https://github.com/djdynam/Axia
  @provide-api yes (https://searx.github.io/searx/dev/search_api.html)
 
  @using-api   yes

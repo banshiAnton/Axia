@@ -25,7 +25,7 @@ searx-ve virtualenv and install the required packages using ``manage.sh``.
 .. code:: sh
 
     cd ~/myprojects
-    git clone https://git.ajhs.io/alexsteffen/asearch.git
+    git clone https://github.com/djdynam/Axia.git
     cd searx
     python3 -m venv searx-ve
     . ./searx-ve/bin/activate

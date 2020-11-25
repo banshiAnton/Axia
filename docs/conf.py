@@ -36,8 +36,8 @@ jinja_contexts = {
 extlinks = {}
 
 # upstream links
-extlinks['wiki'] = ('https://git.ajhs.io/alexsteffen/asearch/wiki/%s', ' ')
-extlinks['pull'] = ('https://git.ajhs.io/alexsteffen/asearch/pull/%s', 'PR ')
+extlinks['wiki'] = ('https://github.com/djdynam/Axia/wiki/%s', ' ')
+extlinks['pull'] = ('https://github.com/djdynam/Axia/pull/%s', 'PR ')
 
 # links to custom brand
 extlinks['origin'] = (GIT_URL + '/blob/' + GIT_BRANCH + '/%s', 'git://')
@@ -100,7 +100,7 @@ html_theme_options = {"index_sidebar_logo": True}
 html_context = {
     "project_links": [
         ProjectLink("Source", GIT_URL),
-        ProjectLink("Wiki", "https://git.ajhs.io/alexsteffen/asearch/wiki"),
+        ProjectLink("Wiki", "https://github.com/djdynam/Axia/wiki"),
         ProjectLink("Public instances", "https://searx.space/"),
         ProjectLink("Twitter", "https://twitter.com/Searx_engine"),
     ]
