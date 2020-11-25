@@ -1,10 +1,9 @@
-requirejs.config({
+﻿requirejs.config({
     baseUrl: './static/themes/oscar/js',
     paths: {
         app: '../app'
     }
 });
-;
 window.searx = (function(d) {
     'use strict';
 
@@ -19,7 +18,6 @@ window.searx = (function(d) {
         method: script.getAttribute('data-method')
     };
 })(document);
-;
 
 if(searx.autocompleter) {
     searx.searchResults = new Bloodhound({
@@ -55,64 +53,28 @@ $(document).ready(function(){
 });
 ;
 
-$(document).ready(function(){
-    /**
-     * focus element if class="autofocus" and id="q"
-     */
-    $('#q.autofocus').focus();
-
-    /**
-     * select full content on click if class="select-all-on-click"
-     */
-    $(".select-all-on-click").click(function () {
-        $(this).select();
-    });
-
-    /**
-     * change text during btn-collapse click if possible
-     */
-    $('.btn-collapse').click(function() {
-        var btnTextCollapsed = $(this).data('btn-text-collapsed');
-        var btnTextNotCollapsed = $(this).data('btn-text-not-collapsed');
-
-        if(btnTextCollapsed !== '' && btnTextNotCollapsed !== '') {
-            if($(this).hasClass('collapsed')) {
-                new_html = $(this).html().replace(btnTextCollapsed, btnTextNotCollapsed);
-            } else {
-                new_html = $(this).html().replace(btnTextNotCollapsed, btnTextCollapsed);
-            }
-            $(this).html(new_html);
+(function (w, d) {
+    'use strict';
+    function addListener(el, type, fn) {
+        if (el.addEventListener) {
+            el.addEventListener(type, fn, false);
+        } else {
+            el.attachEvent('on' + type, fn);
         }
-    });
+    }
 
-    /**
-     * change text during btn-toggle click if possible
-     */
-    $('.btn-toggle .btn').click(function() {
-        var btnClass = 'btn-' + $(this).data('btn-class');
-        var btnLabelDefault = $(this).data('btn-label-default');
-        var btnLabelToggled = $(this).data('btn-label-toggled');
-        if(btnLabelToggled !== '') {
-            if($(this).hasClass('btn-default')) {
-                new_html = $(this).html().replace(btnLabelDefault, btnLabelToggled);
-            } else {
-                new_html = $(this).html().replace(btnLabelToggled, btnLabelDefault);
-            }
-            $(this).html(new_html);
+    function placeCursorAtEnd() {
+        if (this.setSelectionRange) {
+            var len = this.value.length * 2;
+            this.setSelectionRange(len, len);
         }
-        $(this).toggleClass(btnClass);
-        $(this).toggleClass('btn-default');
-    });
+    }
 
-        /**
-     * change text during btn-toggle click if possible
-     */
-    $('.media-loader').click(function() {
-        var target = $(this).data('target');
-        var iframe_load = $(target + ' > iframe');
-        var srctest = iframe_load.attr('src');
-        if(srctest === undefined || srctest === false){
-            iframe_load.attr('src', iframe_load.data('src'));
+    addListener(w, 'load', function () {
+        var qinput = d.getElementById('q');
+        if (qinput !== null && qinput.value === "") {
+            addListener(qinput, 'focus', placeCursorAtEnd);
+            qinput.focus();
         }
     });
 
@@ -153,7 +115,8 @@ $(document).ready(function(){
         }
     });
 });
-;
+
+
 $(document).ready(function(){
     $(".searx_overpass_request").on( "click", function( event ) {
         var overpass_url = "https://overpass-api.de/api/interpreter?data=";
@@ -262,11 +225,11 @@ $(document).ready(function(){
 
             // create the tile layer with correct attribution
             var osmMapnikUrl='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-            var osmMapnikAttrib='Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors';
+            var osmMapnikAttrib='Map data � <a href="https://openstreetmap.org">OpenStreetMap</a> contributors';
             var osmMapnik = new L.TileLayer(osmMapnikUrl, {minZoom: 1, maxZoom: 19, attribution: osmMapnikAttrib});
 
             var osmWikimediaUrl='https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png';
-            var osmWikimediaAttrib = 'Wikimedia maps beta | Maps data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors';
+            var osmWikimediaAttrib = 'Wikimedia maps beta | Maps data � <a href="https://openstreetmap.org">OpenStreetMap</a> contributors';
             var osmWikimedia = new L.TileLayer(osmWikimediaUrl, {minZoom: 1, maxZoom: 19, attribution: osmWikimediaAttrib});
 
             // init map view
