@@ -1,17 +1,22 @@
-{% extends "axia/base.html" %}
+{% extends "oscar/base.html" %}
 {% block content %}
-{% include 'axia/github_ribbon.html' %}
-<div class="center">
-    <div class="title"><h1>AXIA Search</h1></div>
-    {% include 'axia/search.html' %}
-    <p class="top_margin">
-    	{% if rtl %}
-    	<a href="{{ url_for('preferences') }}" class="hmarg">{{ _('preferences') }}</a>
-    	{% endif %}
-        <a href="{{ url_for('about') }}" class="hmarg">{{ _('about') }}</a>
-        {% if not rtl %}
-        <a href="{{ url_for('preferences') }}" class="hmarg">{{ _('preferences') }}</a>
-        {% endif %}
-    </p>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="text-center col-sm-12 col-md-12">
+            <center>
+                <div id="logoX" style="padding-top: 200px;">
+                    <img src="/static/img/logo.svg" title="AXIA Search" />
+                </div>
+            </center>
+        </div>
+    </div>
+    <div class="row">
+        <div class="text-center col-sm-12 col-md-12">
+            {% include 'oscar/search_full.html' %}
+        </div>
+    </div>
 </div>
+
 {% endblock %}
+
