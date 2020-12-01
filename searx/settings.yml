@@ -11,27 +11,33 @@ search:
 
 server:
     port : 8888
-    bind_address : "127.0.0.1" # address to listen on
-    secret_key : "cRfTjWnZr4u7x!A%D*G-KaPdSgVkXp2s5v8y/B?E(H+MbQeThWmZq3t6w9z$C&F)J@NcRfUjXn2r5u7x!A%D*G-KaPdSgVkYp3s6v9y/B?E(H+MbQeThWmZq4t7w!z%C" # change this!
+    bind_address : "0.0.0.0" # address to listen on
+    secret_key : "cRfTjWnZr4u7x!A%D*G-KaPdSgVkXp2s5v8y/B?E(H+MbQeThWmZq3t6w9z$C&F)J@NcRfUjXn2r5u7x!A%D*G-KaPdSgVkYp3s6v9y/B?E(H+MbQeThWmZq4t7w!z%C"" # change this!
     base_url : False # Set custom base_url. Possible values: False or "https://your.custom.host/location/"
-    image_proxy : False # Proxying image results through AXIA
-    http_protocol_version : "1.0"  # 1.0 and 1.1 are supported
+    image_proxy : False # Proxying image results through searx
+    http_protocol_version : "1.1"  # 1.0 and 1.1 are supported
     method: "POST" # POST queries are more secure as they don't show up in history but may cause problems when using Firefox containers
+    default_http_headers:
+        X-Content-Type-Options : nosniff
+        X-XSS-Protection : 1; mode=block
+        X-Download-Options : noopen
+        X-Robots-Tag : noindex, nofollow
+        Referrer-Policy : no-referrer
 
 ui:
     static_path : "" # Custom static path - leave it blank if you didn't change
     templates_path : "" # Custom templates path - leave it blank if you didn't change
-    default_theme : oscar # ui theme
+    default_theme : axia # ui theme
     default_locale : "" # Default interface locale - leave blank to detect from browser information or use codes from the 'locales' config section
     theme_args :
         oscar_style : logicodev # default style of oscar
 #   results_on_new_tab: False  # Open result links in a new tab by default
-#   categories_order :
-#     - general
-#     - files
-#     - map
-#     - it
-#     - science
+   categories_order :
+     - general
+     - files
+     - map
+     - it
+     - science
 
 # Lock arbitrary settings on the preferences page.
 # To find the ID of the user setting you want to lock, check
@@ -42,7 +48,7 @@ ui:
 #      - autocomplete
 #      - method
 
-# Axia supports result proxification using an external service: https://github.com/asciimoo/morty
+# searx supports result proxification using an external service: https://github.com/asciimoo/morty
 # uncomment below section if you have running morty proxy
 # the key is base64 encoded (keep the !!binary notation)
 # Note: since commit af77ec3, morty accepts a base64 encoded key.
@@ -57,13 +63,15 @@ outgoing: # communication with search engines
     pool_connections : 100 # Number of different hosts
     pool_maxsize : 10 # Number of simultaneous requests by host
 # uncomment below section if you want to use a proxy
-# see http://docs.python-requests.org/en/latest/user/advanced/#proxies
-# SOCKS proxies are also supported: see http://requests.readthedocs.io/en/master/user/advanced/#socks
-#    proxies :
-#        http : socks5h://127.0.0.1:9050
-#        https: socks5h://127.0.0.1:9050
-#    using_tor_proxy : True
-#    extra_proxy_timeout : 10.0 # Extra seconds to add in order to account for the time taken by the proxy
+# see https://2.python-requests.org/en/latest/user/advanced/#proxies
+# SOCKS proxies are also supported: see https://2.python-requests.org/en/latest/user/advanced/#socks
+#    proxies:
+#        http:
+#            - http://proxy1:8080
+#            - http://proxy2:8080
+#        https:
+#            - http://proxy1:8080
+#            - http://proxy2:8080
 # uncomment below section only if you have more than one network interface
 # which can be the source of outgoing search requests
 #    source_ips:
@@ -225,6 +233,20 @@ engines:
     shortcut : ew
     disabled : True
 
+#  - name : elasticsearch
+#    shortcut : es
+#    engine : elasticsearch
+#    base_url : http://localhost:9200
+#    username : elastic
+#    password : changeme
+#    index : my-index
+#    # available options: match, simple_query_string, term, terms, custom
+#    query_type : match
+#    # if query_type is set to custom, provide your query here
+#    #custom_query_json: {"query":{"match_all": {}}}
+#    #show_metadata: False
+#    disabled : True
+
   - name : wikidata
     engine : wikidata
     shortcut : wd
@@ -258,11 +280,11 @@ engines:
     shortcut : et
     disabled : True
 
-#  - name : ebay
-#    engine : ebay
-#    shortcut : eb
-#    disabled : True
-#    timeout: 5
+  - name : ebay
+    engine : ebay
+    shortcut : eb
+    disabled : False
+    timeout: 5
 
   - name : 1x
     engine : www1x
@@ -667,7 +689,7 @@ engines:
     shortcut : frl
     disabled : True
 
-#  - name : Axia
+#  - name : searx
 #    engine : searx_engine
 #    shortcut : se
 #    instance_urls :
@@ -687,11 +709,11 @@ engines:
     categories : science
 
 # Spotify needs API credentials
-#  - name : spotify
-#    engine : spotify
-#    shortcut : stf
-#    api_client_id : *******
-#    api_client_secret : *******
+  - name : spotify
+    engine : spotify
+    shortcut : stf
+    api_client_id : afce079e7b91478e9861e015664b6920
+    api_client_secret : 6622fcf33dcb40e29a9bf6c518b2067a
 
   - name : startpage
     engine : startpage
@@ -745,13 +767,13 @@ engines:
 
   - name : unsplash
     engine : unsplash
-    disabled: True
+    disabled: false
     shortcut : us
 
   - name : yahoo
     engine : yahoo
     shortcut : yh
-    disabled : True
+    disabled : False
 
   - name : yandex
     engine : yandex
@@ -793,7 +815,7 @@ engines:
     base_url : "https://{language}.wikibooks.org/"
     number_of_results : 5
     search_type : text
-    disabled : True
+    disabled : False
 
   - name : wikinews
     engine : mediawiki
@@ -961,7 +983,7 @@ engines:
     paging : True
     base_url : https://peer.tube/
     categories: videos
-    disabled : True
+    disabled : False
 
 #  - name : yacy
 #    engine : yacy
