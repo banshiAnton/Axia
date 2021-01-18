@@ -11,8 +11,8 @@ search:
 
 server:
     port : 8888
-    bind_address : "0.0.0.0" # address to listen on
-    secret_key : "cRfTjWnZr4u7x!A%D*G-KaPdSgVkXp2s5v8y/B?E(H+MbQeThWmZq3t6w9z$C&F)J@NcRfUjXn2r5u7x!A%D*G-KaPdSgVkYp3s6v9y/B?E(H+MbQeThWmZq4t7w!z%C"" # change this!
+    bind_address : "127.0.0.1" # address to listen on
+    secret_key : "cRfbfhsjhfbhjsfbhjs" # change this!
     base_url : False # Set custom base_url. Possible values: False or "https://your.custom.host/location/"
     image_proxy : False # Proxying image results through searx
     http_protocol_version : "1.1"  # 1.0 and 1.1 are supported
@@ -32,7 +32,7 @@ ui:
     theme_args :
         oscar_style : logicodev # default style of oscar
 #   results_on_new_tab: False  # Open result links in a new tab by default
-   categories_order :
+    categories_order :
      - general
      - files
      - map
