@@ -1,6 +1,6 @@
 GIT_URL = 'https://github.com/djdynam/Axia'
 GIT_BRANCH = 'master'
 ISSUE_URL = 'https://github.com/djdynam/Axia/issues'
-SEARX_URL = 'https://searx.me'
+SEARX_URL = 'https://search.ajhs.us'
 DOCS_URL = 'https://searx.github.io/searx'
 PUBLIC_INSTANCES = 'https://searx.space'
