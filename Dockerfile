@@ -70,6 +70,8 @@ RUN su searx -c "/usr/bin/python3 -m compileall -q searx"; \
     -o -name '*.svg' -o -name '*.ttf' -o -name '*.eot' \) \
     -type f -exec gzip -9 -k {} \+ -exec brotli --best {} \+
 
+RUN ["chmod", "+x", "/usr/local/searx/dockerfiles/docker-entrypoint.sh"]
+
 # Keep this argument at the end since it change each time
 ARG LABEL_DATE=
 LABEL maintainer="AXIA Search <${GIT_URL}>" \
