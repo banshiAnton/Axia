@@ -57,7 +57,7 @@
     <div {% if endpoint == 'index' %} class="xBody" {% endif %}>
         {% if 1 == 2 %}  <!--{% include 'axia/navbar.html' %}--> {% endif %}
 
-        <div class="container">
+        <div>
             {% if errors %}
             <div class="alert alert-danger fade in" role="alert">
                 <button class="close" data-dismiss="alert" type="button">
@@ -86,30 +86,7 @@
             {% endblock %}
 
         </div>
-        <div class="footer">
-
-            <div class="container">
-                {% block footer %}
-                {% endblock %}
-                <p class="text-muted">
-                    <small>
-                        {{ _('Powered by') }} AXIA
-                        {% if 1 == 2 %}
-                        <!--<br/>
-                        <a href="{{ brand.GIT_URL }}">{{ _('Source code') }}</a> |
-                         <a href="{{ brand.ISSUE_URL }}">{{ _('Issue tracker') }}</a> |
-                         <a href="{{ brand.PUBLIC_INSTANCES }}">{{ _('Public instances') }}</a>-->
-                        {% endif %}
-
-
-                    </small>
-
-
-                </p>
-
-
-            </div>
-        </div>
+        
         <script src="{{ url_for('static', filename='js/jquery-1.11.1.min.js') }}"></script>
         <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
         {% if autocomplete %}

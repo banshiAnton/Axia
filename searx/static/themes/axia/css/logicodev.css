@@ -41,8 +41,7 @@ html {
 
 body {
     font-family: Roboto,Helvetica,Arial,sans-serif;
-    margin-bottom: 80px;
-    background-color: #f3f3f3
+    background-color: #fafafa
 }
 
     body a {
@@ -487,10 +486,15 @@ input[type=checkbox]:not(:checked) + .label_hide_if_not_checked, input[type=chec
     border-color: #888
 }
 
-    #search_form .input-group-btn .btn:hover {
-        background-color: #068922;
-        color: #fff
-    }
+#search_form .input-group-btn .btn:hover {
+    background-color: #068922;
+    color: #fff
+}
+
+#search_form_result {
+    background: linear-gradient(#009dfa, #0077c7);;
+    color: #fff;
+}
 
 .custom-select, .custom-select-rtl {
     appearance: none;
@@ -988,7 +992,7 @@ input.cursor-text {
     outline: none;
     border-radius: 50px !important;
     padding: 10px 30px 10px 60px;
-    background: rgba(255, 255, 255, 0.90) !important;
+    background: white !important;
 }
 
 #btnSrc, #btnSrc2 {
@@ -1146,12 +1150,10 @@ input.cursor-text {
     font-size: 14px;
 }
 .resultSearch1 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding: 25px;
+    align-items: center;
 }
 .resultSearch2 {
-    border-top: 1px dotted #eee;
-    border-bottom: 1px dotted #eee;
     margin-bottom: 20px;
     padding-bottom: 0px;
     padding-top: 10px;
@@ -1163,7 +1165,8 @@ input.cursor-text {
     border-radius: 50px !important;
     margin-left: 0 !important;
     border: none!important;
-    color: rgba(15, 83, 148, 0.75)
+    color: white;
+    background-color: #168fe0;
 }
 .searchBtnX:hover {
 
@@ -1294,4 +1297,45 @@ time{font-size:8pt;
     font-size: 16px;
     border: 0 solid white;
     border-radius: 5px !important;
+}
+
+#time-range {
+    border: none;
+    background-color: white;
+}
+
+#language {
+    border: none;
+    background-color: white;
+}
+
+.search-block {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 30px !important;
+    padding: 5px 5px 5px 20px;
+    align-items: center;
+}
+
+#search_input {
+    background-color: white;
+    border: none;
+    flex: 1;
+    color: black;
+}
+
+#search_input:focus {
+    border: none;
+    outline: none;
+}
+
+#btn-clean-search {
+    padding: 0px 7px;
+    cursor: pointer;
+    z-index: 4;
+    border: none;
+    font-size: 20px;
+    color: rgba(19, 98, 174, 0.33);
 }
