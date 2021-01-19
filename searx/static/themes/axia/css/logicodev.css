@@ -431,13 +431,11 @@ input[type=checkbox]:not(:checked) + .label_hide_if_not_checked, input[type=chec
 
 .search_categories, #categories {
     text-transform: capitalize;
-    margin-bottom: .5rem;
     display: flex;
     flex-wrap: wrap;
     flex-flow: row wrap;
     align-content: stretch;
-         background-color: rgba(0, 0, 0, 0.3) !important;
-         border-radius:10px !important;
+    border-radius:10px !important;
 }
 
     .search_categories label, #categories label, .search_categories .input-group-addon, #categories .input-group-addon {
@@ -445,13 +443,13 @@ input[type=checkbox]:not(:checked) + .label_hide_if_not_checked, input[type=chec
         flex-basis: auto;
         font-size: 1.2rem;
         font-weight: 400;
-        background-color: rgba(0, 0, 0, 0.3) !important;
         border: none;
-        color: #fff;
+        color: #7cb3e3;
         padding-bottom: .4rem;
         padding-top: .4rem;
         text-align: center;
-        min-width: 50px
+        min-width: 50px;
+        margin: 0;
     }
 
 
@@ -461,11 +459,9 @@ input[type=checkbox]:not(:checked) + .label_hide_if_not_checked, input[type=chec
         }
 
     .search_categories input[type=checkbox]:checked + label, #categories input[type=checkbox]:checked + label {
-        color: #000 !important;
         font-weight: 700;
-        background: #fff !important;
-        border: 1px solid #095093;
-        box-shadow: 1px 1px 2px #aaa;
+        color: white;
+        border-top: 2px solid white;
     }
 
 #main-logo {
@@ -1152,11 +1148,11 @@ input.cursor-text {
 .resultSearch1 {
     padding: 25px;
     align-items: center;
+    display: flex;
+    align-items: center;
 }
 .resultSearch2 {
-    margin-bottom: 20px;
     padding-bottom: 0px;
-    padding-top: 10px;
 }
 .searchBtnXPre{
 
@@ -1338,4 +1334,13 @@ time{font-size:8pt;
     border: none;
     font-size: 20px;
     color: rgba(19, 98, 174, 0.33);
+}
+
+.header-categories {
+    border-top: 0.1px solid rgba(255, 255, 255, 0.726);
+}
+
+#categories label {
+    padding: 15px 10px;
+    font-size: 15px;
 }
