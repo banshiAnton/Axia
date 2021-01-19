@@ -27,9 +27,10 @@ var _gsScope = "undefined" != typeof module && module.exports && "undefined" != 
 
     var width, height, strokecolor, canvas, ctx, points, target;
 
-    initHeader();
-    initAnimation();
-    addListeners();
+    // initHeader();
+    // initAnimation();
+    // addListeners();
+    cleanSearchBtn()
 
     function initHeader() {
 
@@ -225,6 +226,10 @@ var _gsScope = "undefined" != typeof module && module.exports && "undefined" != 
     // Util
     function getDistance(p1, p2) {
         return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
+    }
+
+    function cleanSearchBtn() {
+        $('#btnSrcClean').click(() => $('#q').val(''))
     }
 
 })(jQuery);
