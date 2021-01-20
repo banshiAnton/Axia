@@ -1,32 +1,34 @@
+const formSelector = '#search_form_result'
+const inputSearchSelector = '#search_input'
 $(document).ready(function() {
-    if($('#q').length) {
+    if($(inputSearchSelector).length) {
         $('#categories label').click(function(e) {
             $('#categories input[type="checkbox"]').each(function(i, checkbox) {
                 $(checkbox).prop('checked', false);
             });
             $(document.getElementById($(this).attr("for"))).prop('checked', true);
-            if($('#q').val()) {
+            if($(inputSearchSelector).val()) {
                 if (getHttpRequest() == "GET") {
-                    $('#search_form').attr('action', $('#search_form').serialize());
+                    $(formSelector).attr('action', $(formSelector).serialize());
                 }
-                $('#search_form').submit();
+                $(formSelector).submit();
             }
             return false;
         });
         $('#time-range').change(function(e) {
-            if($('#q').val()) {
+            if($(inputSearchSelector).val()) {
                 if (getHttpRequest() == "GET") {
-                    $('#search_form').attr('action', $('#search_form').serialize());
+                    $(formSelector).attr('action', $(formSelector).serialize());
                 }
-                $('#search_form').submit();
+                $(formSelector).submit();
             }
         });
         $('#language').change(function(e) {
-            if($('#q').val()) {
+            if($(inputSearchSelector).val()) {
                 if (getHttpRequest() == "GET") {
-                    $('#search_form').attr('action', $('#search_form').serialize());
+                    $(formSelector).attr('action', $(formSelector).serialize());
                 }
-                $('#search_form').submit();
+                $(formSelector).submit();
             }
         });
     }
