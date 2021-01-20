@@ -347,12 +347,18 @@ input[type=checkbox]:not(:checked) + .label_hide_if_not_checked, input[type=chec
     box-shadow: 4px 4px 1px #666;
 }
  .panel-heading {
-    background-color: #f6f9fa;
+    background-color: #ffffff !important;
+    border: none !important;
 }
 
-    .infobox .panel-heading .panel-title {
-        font-weight: 700
-    }
+.panel-title {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.infobox .panel-heading .panel-title {
+    font-weight: 700
+}
 
 .infobox .header_url {
     white-space: nowrap;
@@ -362,8 +368,7 @@ input[type=checkbox]:not(:checked) + .label_hide_if_not_checked, input[type=chec
 }
 
 .infobox p {
-    font-family: "DejaVu Serif",Georgia,Cambria,"Times New Roman",Times,serif !important;
-    font-style: italic
+    margin: 0;
 }
 
 .infobox img {
@@ -381,7 +386,7 @@ input[type=checkbox]:not(:checked) + .label_hide_if_not_checked, input[type=chec
     }
 
 .infobox .infobox_part {
-    margin-bottom: 20px;
+    padding: 10px 5px;
     word-wrap: break-word;
     table-layout: fixed
 }
@@ -1176,13 +1181,11 @@ input.cursor-text {
 
 }
 .result {
-    padding:10px !important;
     background:rgba(255, 255, 255, 0.95);
-    box-shadow:2px 2px 4px rgba(9, 80, 147, 0.34);
-    border:1px solid #aaa !important;
-    margin-bottom:20px;
-    box-shadow:4px 4px 1px #666;
-
+    border-radius: 10px !important;
+    box-shadow: 0 7px 19px rgb(0 0 0 / 7%);
+    margin-bottom: 25px;
+    border: none;
 }
 .result-content {
     margin: 7px 0;
@@ -1338,9 +1341,80 @@ time{font-size:8pt;
 
 .header-categories {
     border-top: 0.1px solid rgba(255, 255, 255, 0.726);
+    margin-bottom: 15px;
 }
 
 #categories label {
     padding: 15px 10px;
     font-size: 15px;
+}
+
+.result-main {
+    padding: 10px 25px 0 20px !important;
+}
+
+.result-url {
+    padding: 5px 5px 5px 20px !important;
+}
+
+hr {
+    margin: 0;
+}
+
+.number-results {
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+}
+
+.resultSearch1.row {
+    margin: 0;
+}
+
+.suggestion_item button {
+    border: 2.5px solid #168fe1;
+    border-radius: 5px !important;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.suggestion_item button:hover {
+    background-color: #168fe1;
+    color: white;
+    border-color:  #168fe1;
+}
+
+.panel-body.infobox_body.result {
+    padding-top: 0;
+}
+
+p.infobox_part {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+tr > td:first-child {
+    font-weight: 600;
+}
+
+.info-box-urls {
+    background-color: #168fe1;
+    color: white;
+    border-radius: 5px !important;
+    font-size: 15px;
+    border-color:  #168fe1;
+    margin: 3px !important;
+}
+
+.pagination-btn button {
+    border-radius: 10px !important;
+}
+
+.pagination-btn button:hover {
+    background-color: #168fe1;
+    color: white;
+}
+
+.pagination-btn button:focus {
+    outline: none !important;
 }
