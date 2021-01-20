@@ -159,8 +159,6 @@ input[type=checkbox]:not(:checked) + .label_hide_if_not_checked, input[type=chec
     margin-bottom: 5px;
     font-size: 15pt;
     padding-bottom:5px;
-    border-bottom:1px dotted #ddd;
-
 }
 
     .result_header .favicon {
@@ -168,7 +166,7 @@ input[type=checkbox]:not(:checked) + .label_hide_if_not_checked, input[type=chec
     }
 
     .result_header a {
-        color: #000;
+        color: #08c;
         text-decoration: none
     }
 
@@ -1235,21 +1233,24 @@ color:#444 !important;
 }
 .magnetlink, .torrentfile {
     margin-right: 10px;
+    border-radius: 10px !important;
     border: 1px solid #aaa;
     background: #fff;
-    box-shadow: 1px 1px 1px #aaa;
     padding: 3px 5px;
     color: #0a1e69;
     margin-bottom:10px;
 }
     .magnetlink:hover, .torrentfile:hover {
-        color: #0026ba;
-        box-shadow: 2px 2px 1px #666;
+        color: white;
+        background-color:  #168fe1;
         border: 1px solid #556366;
+        text-decoration: none;
     }
+    
     .magnetlink span, .torrentfile span {
         padding-right: 5px;
     }
+
 .result.images {
     text-align:center;
 
@@ -1410,11 +1411,31 @@ tr > td:first-child {
     border-radius: 10px !important;
 }
 
-.pagination-btn button:hover {
+.pagination-btn button:hover, .img-link:hover {
     background-color: #168fe1;
     color: white;
 }
 
 .pagination-btn button:focus {
     outline: none !important;
+}
+
+.img-thumbnail {
+    border: none;
+}
+
+.result-images {
+    box-shadow: none;
+}
+
+.result-images a {
+    background-color: #fafafa;
+}
+
+.modal-img {
+    border-radius: 15px !important;
+}
+
+.result-videos, .result-torrent, .result-code, .result-map, .result-products {
+    padding: 30px;
 }
