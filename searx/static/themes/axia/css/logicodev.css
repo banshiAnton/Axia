@@ -481,6 +481,13 @@ input[type=checkbox]:not(:checked) + .label_hide_if_not_checked, input[type=chec
     box-shadow: none;
 }
 
+#search_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #search_form .input-group-btn .btn {
     border-color: #888
 }

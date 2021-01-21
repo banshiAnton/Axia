@@ -4,13 +4,13 @@
     {% if rtl %}
     <div class="input-group">
     {% else %}
-    <div class="input-group col-md-8 col-md-offset-2">
+    <div class="input-group col-md-6 col-sm-8">
     {% endif %}
         <span class="glyphicon glyphicon-search" id="btnSrc"></span>
         <input type="search"  autofocus name="q" class="form-control input-lg autofocus" id="q" placeholder="{{ _('Search for...') }}" aria-label="{{ _('Search for...') }}" autocomplete="off" value="{{ q }}" accesskey="s">
         <span class="glyphicon glyphicon-remove" id="btnSrcClean"></span>
     </div>
-    <div class="col-md-8 col-md-offset-2 search-btn-block">
+    <div class="col-md-8 search-btn-block">
         <button type="submit" class="btn btn-default search-btn" aria-label="{{ _('Start search') }}">
             {{ _('Start search') }}
         </button>
