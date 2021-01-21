@@ -1426,10 +1426,16 @@ tr > td:first-child {
 
 .result-images {
     box-shadow: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .result-images a {
     background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-img {
