@@ -1,10 +1,10 @@
 {% from 'axia/macros.html' import icon %}
 <form method="{{ method or 'POST' }}" action="{{ url_for('search') }}" id="search_form_result" role="search">
     <div class="row resultSearch1">
-        <div class="col-xs-2 col-md-1">
+        <div class="logo-link col-sm-2">
             <a href="/"><img id="search-logo" src="/static/img/axia-logo2.png" title="AXIA Search" /></a>
         </div>
-        <div class="col-xs-7 col-md-5">
+        <div class="col-sm-4">
             <div class="search-block">
                 <input id="search_input" type="search" autofocus name="q" placeholder="{{ _('Search for...') }}" aria-label="{{ _('Search for...') }}" autocomplete="off" value="{{ q }}" accesskey="s">
                 <span class="glyphicon glyphicon-remove" id="btn-clean-search"></span>
@@ -14,10 +14,10 @@
                 </button>
             </div>
         </div>
-        <div class="col-xs-3 col-md-2">
+        <div class="col-sm-3">
             {%- include 'axia/time-range.html' -%}
         </div>
-        <div class="col-xs-3 col-md-2">
+        <div class="col-sm-3">
             {%- include 'axia/languages.html' -%}
         </div>
     </div>
