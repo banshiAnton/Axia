@@ -1439,3 +1439,7 @@ tr > td:first-child {
 .result-videos, .result-torrent, .result-code, .result-map, .result-products {
     padding: 30px;
 }
+
+#search-logo {
+    width: 100%;
+}
